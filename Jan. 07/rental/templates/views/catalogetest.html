@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Catalog Test</title>
+</head>
+<body>
+    <h2> Display Catalog here with Django </h2>
+    <h3>{{ title }}</h3>
+    <!-- <ul>
+    {% for m in movies %}
+        <li>{{m.title}}</li>
+    {% endfor %}
+    </ul>  -->
+
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Title
+                </th>
+                <th>
+                    Release Year
+                </th>
+                <th>
+                    Price
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for m in movies %}
+                <tr>
+                    <td>{{m.id}}</td>
+                    <td>{{m.title}}</td>
+                    <td>{{m.release_year}}</td>
+                    <td>{{m.price}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
+
+
